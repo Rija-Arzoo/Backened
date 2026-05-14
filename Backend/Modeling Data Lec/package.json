@@ -1,0 +1,15 @@
+{
+  "name": "modeling-data-lec",
+  "version": "1.0.0",
+  "description": "data modeling",
+  "license": "ISC",
+  "author": "Rija Arzoo",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
