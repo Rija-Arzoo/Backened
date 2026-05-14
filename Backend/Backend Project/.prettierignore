@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+dist/
+build/
+.next/
+out/
+
+# Version Control
+.git/
+.svn/
+.hg/
+
+# Environment and Secrets
+.env
+.env.*
+*.pem
+*.key
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Static Assets and Media
+public/
+vendor/
+*.min.js
+*.min.css
+*.map
+
+# OS files
+
+.DS_Store
+Thumbs.db
+
+# Documentation and Coverage
+
+coverage/
+docs/
