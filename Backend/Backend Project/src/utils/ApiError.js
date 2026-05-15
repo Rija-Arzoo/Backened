@@ -7,7 +7,7 @@ class ApiError extends Error{
     )
     {
         super(message);
-        this.statusCode=statuscode;
+        this.statusCode=statusCode;
         this.data=null;
         this.message=message;
         this.success=false;
@@ -17,7 +17,7 @@ class ApiError extends Error{
             this.stack=statck;
         }
         else{
-            Error.captureStackTrace(this,this.constructor)
+            Error.captureStackTrace(this,this.constructor);
 
         }
     }
