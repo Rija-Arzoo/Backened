@@ -3,8 +3,8 @@ import fs from "fs";
 
 cloudinary.config({
     cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
-    api_key: CLOUDINARY_API_KEY,
-    api_secret: CLOUDINARY_API_SECRET
+    api_key: process.env.CLOUDINARY_API_KEY,
+    api_secret: process.env.CLOUDINARY_API_SECRET
 });
 
 const uploadOnCloudinary = async (localFilePath) => {
@@ -16,11 +16,12 @@ const uploadOnCloudinary = async (localFilePath) => {
         //upload on cloudinary
         const response = await cloudinary.uploader.upload(localFilePath, {
             resource_type: "auto",
-            overwrite: true,
-            notification_url: "https://mysite.example.com/notify_endpoint"
+            //overwrite: true,
+            //notification_url: "https://mysite.example.com/notify_endpoint"
         })
         //file has uploaded sucessfully
-        console.log("file has uploaded sucessfully", response.url)
+        console.log("file has uploaded sucessfully", response.url);
+        fs.unlinkSync(localFilePath);
         return response;
 
     } catch (error) {
